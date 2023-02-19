@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>31</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+    <link rel="stylesheet" href="css/over_4.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-9">
+                <table class="table" id="usersTable">
+                    <thead>
+                        <tr>
+                            <td colspan="4" style="text-align: center;">
+                                <h1>Ügyfelek</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">
+                                <input type="text" id="id" class="form-control" readonly maxlength="3" size="3" style="background-color: rgb(224, 224, 224); color: darkgray;">
+                            </td>
+                            <td>
+                                <input type="text" id="first" class="form-control" placeholder="First">
+                            </td>
+                            <td>
+                                <input type="text" id="last" class="form-control" placeholder="Last">
+                            </td>
+                            <td>
+                                <input type="text" id="handle" class="form-control" placeholder="Handle">
+                            </td>
+                            <td class="gombok" style="width: 50%">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-primary" onclick="addRow()">
+                                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>First</th>
+                            <th>Last</th>
+                            <th>Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+</body>
+<script src="js\addRow_17.js"></script>
+</html>

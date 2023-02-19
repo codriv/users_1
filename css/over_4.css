@@ -1,0 +1,101 @@
+
+table {
+    margin-top: 5% !important;
+}
+
+table tbody tr td, table tbody tr th {
+   vertical-align: unset !important;
+}
+
+ table thead tr th {
+     border-bottom: red solid 1px !important;
+ }
+
+ table thead tr td {
+     border-top: transparent solid 1px !important;
+ }
+ 
+ table thead tr:first-child td {
+     border-bottom: black solid 1px !important;
+ }
+ 
+ table tbody button.btn{
+    visibility: hidden !important;
+ }
+
+ table tbody tr:hover .btn {
+    visibility: visible !important;
+ }
+ 
+ table thead tr:nth-child(2) td:first-child input {
+    padding: .375rem 0.15rem !important;
+ }
+
+ table thead tr:nth-child(2) td:nth-child(n+1) input, tbody input {
+    padding: .375rem 0.15rem !important;
+ }
+ 
+ table thead tr:nth-child(2) td:nth-child(n+1) input::placeholder {
+    color: rgb(38, 0, 255);
+    font-weight: 600;
+    opacity: 0.15 !important
+ }
+ 
+ tbody input::placeholder {
+    color: rgb(38, 0, 255);
+    font-weight: 600;
+    opacity: 0.3 !important
+ }
+
+ table thead tr:nth-child(2) td:nth-child(n+1) input:focus::placeholder, tbody input:focus::placeholder {
+    opacity: 0 !important;
+ }
+
+ table tbody input {
+    border-color: transparent !important;
+    outline-color: transparent;
+ }
+
+ table thead tr:nth-child(2) td {
+    padding: .375rem 0.5rem !important;
+ }
+
+ table tbody tr td.gombok {
+     border-top: unset !important;
+     width: 14% !important;
+     border-left: transparent solid 1px !important;
+     border-bottom: unset !important;
+ }
+
+ table tbody tr td:not(.gombok) {
+     border-top: rgb(224, 224, 224) solid 1px !important;
+     width: 26% !important;
+ }
+
+ table tbody tr th {
+    border-left: transparent solid 1px !important;
+    border-top: rgb(224, 224, 224) solid 1px !important;
+    width: 8% !important;
+ }
+
+ table tbody tr:hover th {
+    border-left: red solid 1px !important;
+    border-bottom: red solid 1px !important;
+    border-top: red solid 1px !important;
+ }
+
+ table tbody tr:hover td:not(.gombok) {
+     border-top: red solid 1px !important;
+     border-bottom: red solid 1px !important;
+ }
+ 
+ table tbody tr {
+     border: solid transparent 1px !important;
+ }
+ 
+ table tbody tr:hover td.gombok {
+    border-left: red solid 1px !important;
+    border-top: blue solid 1px !important;
+    border-bottom: blue solid 1px !important;
+    border-right: blue solid 1px !important;
+ }
