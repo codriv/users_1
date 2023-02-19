@@ -95,7 +95,7 @@ function addRow() {
     }
 
 function leker() {
-    fetch("http://192.168.0.2:8080/users", fetchInitGet).then(
+    fetch("ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io:80/users", fetchInitGet).then(
         data => data.json(),
         err => console.log(err)
         ).then(
@@ -204,7 +204,7 @@ function rowModInputok (sorszam, selectedRowInputFields, selectedUser, ids, gomb
 }
 
 function rowDelFetch (sorszam) {
-    fetch(`http://192.168.0.2:8080/users/${sorszam}`, fetchInitDelete).then(
+    fetch(`ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io:80/users/${sorszam}`, fetchInitDelete).then(
         resolve => resolve.json(),
         rejet => console.error(reject)
     ).then(
@@ -215,7 +215,7 @@ function rowDelFetch (sorszam) {
 
 function rowModFetch (sorszam, inputok, gombWarning) {
     fetchInitPatch.body= JSON.stringify(inputok);
-    fetch(`http://192.168.0.2:8080/users/${sorszam}`, fetchInitPatch).then(
+    fetch(`ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io:80/users/${sorszam}`, fetchInitPatch).then(
         resolve => resolve.json(),
         rejet => console.error(reject)
     ).then(
@@ -231,7 +231,7 @@ function rowModFetch (sorszam, inputok, gombWarning) {
 
 function addRowFetch (newUser) {
     fetchInitPost.body= JSON.stringify(newUser);
-    fetch("http://192.168.0.2:8080/users", fetchInitPost).then(
+    fetch("ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io:80/users", fetchInitPost).then(
         resolve => resolve.json(),
         rejet => console.error(reject)
     ).then(
