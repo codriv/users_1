@@ -17,24 +17,8 @@ var gombMod = '<button type="button" class="btn btn-success" onclick="rowModButt
 let fetchInitGet = {
     method: "GET",
     headers: {
-        "authoirity": "ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io",
-        "method": "GET",
-        "path": "/users",
-        "scheme": "https",
         "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
         "accept-encoding": "gzip, deflate, br",
-        "accept-language": "hu-HU,hu;q=0.9,en-US;q=0.8,en;q=0.7",
-        "cache-control": "max-age=0",
-        "dnt": 1
-        "sec-ch-ua": "Chromium";v="100", " Not A;Brand";v="99",
-        "sec-ch-ua-mobile": "?0"
-        "sec-ch-ua-platform": "Windows"
-        "sec-fetch-dest": "document"
-        "sec-fetch-mode": "navigate"
-        "sec-fetch-site": "none"
-        "sec-fetch-user": "?1"
-        "upgrade-insecure-requests": 1
-        "user-agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.162 Safari/537.36"
         },
     mode: "cors",
     cache: "no-cache"
@@ -114,7 +98,7 @@ function addRow() {
     }
 
 function leker() {
-    fetch("https://ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io:80/users", fetchInitGet).then(
+    fetch("https://ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io/users", fetchInitGet).then(
         data => data.json(),
         err => console.log(err)
         ).then(
@@ -223,7 +207,7 @@ function rowModInputok (sorszam, selectedRowInputFields, selectedUser, ids, gomb
 }
 
 function rowDelFetch (sorszam) {
-    fetch(`https://ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io:80/users/${sorszam}`, fetchInitDelete).then(
+    fetch(`https://ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io/users/${sorszam}`, fetchInitDelete).then(
         resolve => resolve.json(),
         rejet => console.error(reject)
     ).then(
@@ -234,7 +218,7 @@ function rowDelFetch (sorszam) {
 
 function rowModFetch (sorszam, inputok, gombWarning) {
     fetchInitPatch.body= JSON.stringify(inputok);
-    fetch(`https://ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io:80/users/${sorszam}`, fetchInitPatch).then(
+    fetch(`https://ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io/users/${sorszam}`, fetchInitPatch).then(
         resolve => resolve.json(),
         rejet => console.error(reject)
     ).then(
@@ -250,7 +234,7 @@ function rowModFetch (sorszam, inputok, gombWarning) {
 
 function addRowFetch (newUser) {
     fetchInitPost.body= JSON.stringify(newUser);
-    fetch("https://ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io:80/users", fetchInitPost).then(
+    fetch("https://ifksp-prod-probadocker-yr4i9t.mo5.mogenius.io/users", fetchInitPost).then(
         resolve => resolve.json(),
         rejet => console.error(reject)
     ).then(
